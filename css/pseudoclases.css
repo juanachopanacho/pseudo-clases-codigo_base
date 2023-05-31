@@ -1,0 +1,137 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--fondoPrimario: #FCF7F8;
+	--colorOscuro: #1A1E21;
+	--azul: #3860EC;
+}
+
+body {
+	background: var(--fondoPrimario);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+ul {
+	margin: 0;
+}
+
+.contenedor {
+	max-width: 500px;
+	width: 90%;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.titulo {
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--colorOscuro);
+	margin-bottom: 20px;
+}
+
+.grupo {
+	padding: 60px 0;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.grupo div p,
+.grupo div div,
+.grupo div span,
+.grupo ul li {
+	background: #dbdbdb;
+	padding: 10px;
+}
+
+/* ? ------------- PSEUDO-CLASES ------------- */
+.enlace:active{
+	background-color: #3860EC;
+}
+
+.enlace:link{
+	color: aqua;
+}
+
+.enlace:visited{
+	stop-color:red;
+}
+
+.enlace:hover{
+	color: orange;
+}
+
+/* ? --- --- --- --- PARRAFOS --- --- --- --- acceder al primero y no cambiar, lo que si tocaria en caso de que asignemos clases*/
+.parrafos p:first-child{
+	background: var(--azul);
+	color: white;
+}
+
+.parrafos p:last-child{
+	background: black;
+	color: white;
+}
+
+/* ? --- --- --- --- ELEMENTOS --- --- --- --- */
+
+.elementos p:first-of-type{
+	background: var(--azul);
+	color: white;
+
+}
+
+.elementos div:last-of-type{
+	background: black;
+	color: white;
+
+}
+
+/* ? --- --- --- --- LISTA --- --- --- --- colocar numero, odd, even,xn (cada x numero de elementos) */
+.lista :nth-child(2){
+	background: var(--azul);
+	color: white;
+}
+
+.lista :nth-last-child(even){
+	background: black;
+	color: white;
+}
+
+
+/* ? --- --- --- --- LISTA 2 --- --- --- --- */
+.lista2 p:nth-of-type(3){
+	background: var(--azul);
+	color: white;
+}
+
+.lista2 div:nth-last-of-type(2){
+	background: black;
+	color: white;
+}
+
+
+/* ? --- --- --- --- LISTA 3 --- --- --- --- */
+.lista3 :only-child{
+	background: var(--azul);
+	color: white;
+
+}
+
+.lista4 p:only-of-type{
+	background: var(--azul);
+	color: white;
+}
+
+
+/* ? --- --- --- --- LISTA 4 --- --- --- --- */
